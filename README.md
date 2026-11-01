@@ -1,24 +1,24 @@
-# 📊 HCL Technologies — Employee Salary Analysis
+# HCL Technologies — Employee Salary Analysis
 
 > **A data science consulting project** evaluating salary determinants for HCL Technologies employees using regression analysis, hypothesis testing, and advanced econometric modelling.
 
 ---
 
-## 🗂️ Table of Contents
+## Table of Contents
 
-- [Project Overview](#-project-overview)
-- [Dataset](#-dataset)
-- [Repository Structure](#-repository-structure)
-- [Analysis Pipeline](#-analysis-pipeline)
-- [Key Findings](#-key-findings)
-- [Visualizations](#-visualizations)
-- [Setup & Installation](#-setup--installation)
-- [Technologies Used](#-technologies-used)
-- [Authors](#-authors)
+- [Project Overview](#project-overview)
+- [Dataset](#dataset)
+- [Repository Structure](#repository-structure)
+- [Analysis Pipeline](#analysis-pipeline)
+- [Key Findings](#key-findings)
+- [Visualizations](#visualizations)
+- [Setup & Installation](#setup--installation)
+- [Technologies Used](#technologies-used)
+- [Authors](#authors)
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project is a **data science consulting engagement** contracted by HCL Technologies to evaluate and model the salary packages of its IT workforce. The dataset (collected in 2014) covers 526 employees with 25 variables spanning human capital, demographics, geography, and IT role specializations.
 
@@ -34,7 +34,7 @@ The analysis addresses the following core questions:
 
 ---
 
-## 📁 Dataset
+## Dataset
 
 | File | Description |
 |---|---|
@@ -73,16 +73,16 @@ The analysis addresses the following core questions:
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 HCL_SALARY-ANALYSIS/
 │
-├── 📓 MP2/
+├── MP2/
 │   ├── mp_2.ipynb                    # Main analysis notebook (full pipeline)
 │   └── MP_2.docx                     # Formal project report
 │
-├── 📊 figures/                        # All generated plots and charts
+├── figures/                          # All generated plots and charts
 │   ├── client_executive_dashboard.png
 │   ├── client_chart1_salary_distribution.png
 │   ├── client_chart2_human_capital_curves.png
@@ -98,19 +98,20 @@ HCL_SALARY-ANALYSIS/
 │   ├── rec_plot4_workplace_location_policy_matrix.png
 │   └── ... (23 figures total)
 │
-├── 📄 IT_employees_full.csv          # Clean dataset (526 employees × 25 vars)
-├── 📄 data_description.csv           # Variable codebook
-├── 📄 data_cleaning_description.md   # Detailed data preprocessing log
-├── 🐍 generate_all_plots.py          # Script to regenerate all figures
-├── 📋 requirements.txt               # Python package dependencies
-└── 📖 README.md                      # This file
+├── IT_employees_full.csv             # Clean dataset (526 employees × 25 vars)
+├── data_description.csv              # Variable codebook
+├── data_cleaning_description.md      # Detailed data preprocessing log
+├── generate_all_plots.py             # Script to regenerate all figures
+├── requirements.txt                  # Python package dependencies
+└── README.md                         # This file
 ```
 
 ---
 
-## ⚙️ Analysis Pipeline
+## Analysis Pipeline
 
 ### 1. Data Cleaning & Preprocessing
+
 > Full details in [`data_cleaning_description.md`](data_cleaning_description.md)
 
 | Step | Technique | Impact |
@@ -125,11 +126,13 @@ HCL_SALARY-ANALYSIS/
 | Feature Scaling | Z-score standardization (`StandardScaler`) | Normalized 8 continuous variables |
 
 ### 2. Exploratory Data Analysis
+
 - Salary distributions (raw vs. log-transformed)
 - Correlation heatmaps and distributional profiling
-- Group-level salary comparisons across gender, location, IT role
+- Group-level salary comparisons across gender, location, and IT role
 
 ### 3. Regression Modelling
+
 - **Baseline OLS Model** — linear predictors of `log(salary)`
 - **Quadratic Extensions** — non-linear effects of `edu²`, `exper²`, `ten²`
 - **Interaction Models** — e.g., `exper × edu`, `female × metro`
@@ -139,11 +142,12 @@ HCL_SALARY-ANALYSIS/
 - **Model Selection** — AIC/BIC comparison across specifications
 
 ### 4. Recommendations
+
 Data-driven policy recommendations for HCL management on pay equity, tenure loyalty penalties, upskilling ladders, and remote work policies.
 
 ---
 
-## 📈 Key Findings
+## Key Findings
 
 | Finding | Direction | Significance |
 |---|---|---|
@@ -152,21 +156,21 @@ Data-driven policy recommendations for HCL management on pay equity, tenure loya
 | **Gender Pay Gap** — female employees earn less, controlling for all factors | Negative | Significant |
 | **IT Architecture & AI roles** carry the highest salary premiums | Positive | Significant |
 | **Metro location** boosts salary | Positive | Significant |
-| **Work-from-home** is associated with salary discount | Negative | Significant |
-| **Tenure loyalty penalty** — long-tenured employees underpaid vs. market | Negative | Significant |
+| **Work-from-home** is associated with a salary discount | Negative | Significant |
+| **Tenure loyalty penalty** — long-tenured employees are underpaid vs. market | Negative | Significant |
 
 ---
 
-## 🖼️ Visualizations
+## Visualizations
 
-> A selection of key figures from the analysis:
+A selection of key figures from the analysis:
 
 | Figure | Description |
 |---|---|
 | `client_executive_dashboard.png` | High-level executive summary dashboard |
-| `plot1_salary_vs_log_salary_histograms.png` | Salary distribution & log-normality check |
-| `plot2_human_capital_nonlinear_curves.png` | Quadratic fits for education, experience, tenure |
-| `plot3_salary_differences_forest_plot.png` | Forest plot of gender & group salary gaps |
+| `plot1_salary_vs_log_salary_histograms.png` | Salary distribution and log-normality check |
+| `plot2_human_capital_nonlinear_curves.png` | Quadratic fits for education, experience, and tenure |
+| `plot3_salary_differences_forest_plot.png` | Forest plot of gender and group salary gaps |
 | `regression_diagnostics_four_panel.png` | Full OLS diagnostic panel (4 plots) |
 | `rec_plot1_pay_equity_action_plan.png` | Pay equity action plan visualization |
 
@@ -174,13 +178,9 @@ All figures are in [`figures/`](figures/).
 
 ---
 
-## 🛠️ Setup & Installation
+## Setup & Installation
 
-### Prerequisites
-- Python 3.9+
-- pip
-
-### Installation
+**Prerequisites:** Python 3.9+, pip
 
 ```bash
 # 1. Clone the repository
@@ -189,10 +189,8 @@ cd HCL_SALARY-ANALYSIS
 
 # 2. Create and activate a virtual environment (recommended)
 python -m venv env
-# Windows:
-env\Scripts\activate
-# macOS/Linux:
-source env/bin/activate
+env\Scripts\activate        # Windows
+# source env/bin/activate   # macOS / Linux
 
 # 3. Install dependencies
 pip install -r requirements.txt
@@ -201,7 +199,7 @@ pip install -r requirements.txt
 jupyter notebook MP2/mp_2.ipynb
 ```
 
-### Regenerate All Figures
+**Regenerate all figures:**
 
 ```bash
 python generate_all_plots.py
@@ -209,7 +207,7 @@ python generate_all_plots.py
 
 ---
 
-## 🔬 Technologies Used
+## Technologies Used
 
 | Library | Purpose |
 |---|---|
@@ -225,18 +223,14 @@ python generate_all_plots.py
 
 ---
 
-## 👥 Authors
+## Authors
 
-**Korrapati Jaideep** — Data Science & Analytics  
+**Korrapati Jaideep**  
 Course: DOM207 · Monsoon 2026  
-Institution: Shiv Nadar University  
+Shiv Nadar University
 
 ---
 
-## 📜 License
+## License
 
 This project is for academic and educational purposes. The dataset is proprietary to HCL Technologies and may not be redistributed or used for commercial purposes.
-
----
-
-*Built with rigour, curiosity, and a lot of `statsmodels`*
