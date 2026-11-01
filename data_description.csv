@@ -1,0 +1,26 @@
+﻿Num,Variable,Description,type
+4,exper,years professional experience,numerical(continuous)
+5,ten,years of work in the current company,numerical
+3,edu,years of formal education,numerical
+23,momed,mom’s years of education,numerical
+1,Id,employee identification #,identifier
+24,daded,dad’s years of education,numerical
+2,sal,average hourly salary,numerical
+19,itclient,1 if works only with IT client,nominal
+21,ittech                   ,1 if works in IT tech support,nominal
+14,itreq,1 if works in IT requirements group,nominal
+20,itrd,1 if works in IT R&D division,nominal
+16,itqual,1 if works in IT quality assurance group,nominal
+15,itprog,1 if works in IT programming group,nominal
+17,itarch,1 if works in IT architecture group,nominal
+8,married,1 if married,nominal
+13,west,1 if lives in western Indian province,nominal
+12,south,1 if lives in southern Indian province,nominal
+11,norcen,1 if lives in north-central Indian province,nominal
+10,metro,1 if lives in a metro area,nominal
+18,itai,1 if IT work involves AI applications,nominal
+7,female,1 if female,nominal
+22,wrkhm ,1 if employee works primarily from home,nominal
+6,noprev,1 if a non-privileged employee,nominal
+25,sib,# of siblings,numerical
+9,dep,# of dependents in the immediate family,numerical

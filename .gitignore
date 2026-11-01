@@ -1,0 +1,64 @@
+# =============================================================
+# HCL Salary Analysis — .gitignore
+# =============================================================
+
+# ── Python Virtual Environments ───────────────────────────────
+env/
+venv/
+.venv/
+ENV/
+
+# ── Python Cache & Compiled Files ─────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+
+# ── Jupyter Notebook Checkpoints ──────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Distribution / Build ──────────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ── IDE & Editor ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ── OS Files ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── R Project Files ───────────────────────────────────────────
+*.Rproj
+.Rproj.user/
+.Rhistory
+.RData
+
+# ── Large / Unwanted Files ────────────────────────────────────
+# Raw Excel (original — CSV is the clean version)
+ITEmp.xlsx
+
+# Specification PDFs (coursework docs — not needed in repo)
+MP2Specs.pdf
+mp2_specs.txt
+Data\ Science\ from\ Scratch\ by\ Joel\ Grus.pdf
+skills-lock.json
+
+# Temp/lock Word files
+~$*.docx
+
+# ── Agent Customization (internal IDE tooling) ─────────────────
+.agents/
+
+# ── Logs ──────────────────────────────────────────────────────
+*.log
+logs/
